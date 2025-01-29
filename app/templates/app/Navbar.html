@@ -1,0 +1,14 @@
+{% load static %}
+
+<div class="navbar">
+    <img src="{% static 'images/tree_faviconn.png' %}" class="navbar_logo" alt="Logo">
+
+    <div class="navbar_links">
+        <a href="{% url 'Home' %}">Home</a>
+        <a href="{% url 'About' %}">About Trees</a>
+        <a href="{% url 'Add' %}">Wiki</a>
+        <a href="{% url 'Image_gallery' %}">Images</a>
+        <a href="{% url 'Video_list' %}">Videos</a>
+        <a href="{% url 'Contact' %}">Contact</a>
+    </div>
+</div>

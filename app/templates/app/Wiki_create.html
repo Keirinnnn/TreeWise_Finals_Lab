@@ -1,0 +1,12 @@
+{% extends 'app/Base.html' %}
+{% load static %}
+
+{% block content %}
+    <h1>New Post</h1>
+
+    <form action="{% url 'Wiki_create' %}" class="wiki_form" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Save">
+    </form>
+{% endblock content %}

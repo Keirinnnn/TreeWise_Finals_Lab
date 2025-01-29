@@ -1,0 +1,27 @@
+{% extends 'app/Base.html' %}
+{% load static %}
+
+{% block content %}
+    <h1>Video Gallery</h1>
+    <div class="btn_center">
+        <a href="{% url 'Video' %}" class="addvid_btn">Add Video</a>
+    </div>
+    {% if videos %}
+        <div class="video_gallery">
+            {% for video in videos %}
+                <div class="video_item">
+                    <h2>
+                        <a href="{% url 'Video_comment' video.pk %}">{{ video.title }}</a>
+                    </h2>
+                    {% if video.description %}
+                        <p>{{ video.description }}</p>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="no_video_container">
+            <p>No Videos Found</p>
+        </div>
+    {% endif %}
+{% endblock content %}

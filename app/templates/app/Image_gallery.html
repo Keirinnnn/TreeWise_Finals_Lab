@@ -1,0 +1,28 @@
+{% extends 'app/Base.html' %}
+{%load static%}
+{% block content %}
+
+    <h1>Image Gallery</h1>
+
+    <div class="btn_center">
+        <a href="{% url 'Image_upload' %}" class="imgadd_btn">Add Image</a>
+    </div>
+    {% if images %}
+        <div class="gallery_grid">
+            {% for image in images %}
+                <div class="gallery_item">
+                    <p>{{ image.title }}</p>
+                    <img src="{{ image.image.url }}" alt="{{ image.title }}">
+                </div>
+            {% endfor %}
+        </div>
+
+    {% else %}
+        <div class="no_image_container">
+            <p>No Image Found</p>
+        </div>
+    {% endif %}
+
+        <script src="{% static 'js/base.js' %}"></script>
+
+{% endblock content %}

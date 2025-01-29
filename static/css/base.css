@@ -1,0 +1,732 @@
+/* Base */
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: #f4f4f4;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', Arial, sans-serif;
+    color: #333;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+h1, h2 {
+    color: #3a5f3a;
+    text-align: center;
+    margin: 1em 0;
+}
+
+h1 {
+    font-size: 2.5em; 
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+a {
+    color: #3a5f3a;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #3a5f3a;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #2d4d2d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar_logo {
+    max-height: 45px;
+    margin-right: 1em;
+}
+
+.navbar_links {
+    margin-left: auto;
+}
+
+.navbar a {
+    color: #f8f8f8;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    margin: 0 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Home */
+.home_body {
+    display: flex;
+    flex-direction: column;
+}
+
+.tree_section {
+    background-size: cover;
+    background-position: center;
+    padding: 20px 20px;
+    text-align: center;
+    color: white;
+    flex: 0;
+}
+
+.tree_content h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.tree_content p {
+    font-size: 1.2em;
+    color: #2c6e49;
+}
+
+.featured_species {
+    padding: 20px 20px;
+    text-align: center;
+}
+
+.species_card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.species_card img {
+    max-width: 100%;
+    border-radius: 8px 8px 0 0; 
+}
+
+.featured_species h2 {
+    margin-bottom: 20px;
+}
+
+/* About */
+.about {
+    padding: 1em;
+}
+
+.about_p {
+    background-color: #ffffff;
+    margin: 1em auto;
+    padding: 1.5em;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    max-width: 750px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Wiki List */
+.post_entry h2 a:hover {
+    color: #2d4d2d;
+}
+
+.post_entry {
+    background-color: #ffffff;
+    margin: 1em auto;
+    padding: 1.5em;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    max-width: 750px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.post_entry p, .post_entry h2 {
+    overflow-wrap: break-word;
+    white-space: normal;
+    line-height: 1.6;
+}
+
+input[type="text"],
+textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #4a7c4a;
+    box-shadow: 0 0 5px rgba(74, 124, 74, 0.5);
+}
+
+.wiki_form {
+    max-width: 100%;
+    margin: 1.5em auto;
+    padding: 1.5em;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+/* Wiki Search Button */
+.search_form {
+    max-width: 100%;
+    width: 70%;
+    margin: 1.5em auto;
+    background-color: #ffffff;
+    padding: 1.2em;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.wiki_search {
+    display: inline-block;
+    margin: 0.5em 0.5em 0 0;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #3a7a3a;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.wiki_search:hover {
+    background-color: #2e5f2e;
+}
+
+.wiki_upd_form {
+    max-width: 100%;
+    margin: 1.5em auto;
+    padding: 1.5em;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+.wiki_del_form {
+    max-width: 100%;
+    margin: 1.5em auto;
+    padding: 1.5em;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+/* Table in Wiki_list */
+table {
+    table-layout: fixed;
+    width: 100%;
+    max-width: 95%;
+    margin: 1.5em auto; 
+    padding: 1em;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 1em;
+    overflow-wrap: break-word;
+    white-space: normal;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+th {
+    background-color: #3a7a3a;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #F8F9FA;
+}
+
+tr:nth-child(odd) {
+    background-color: #FFFFFF;
+}
+
+
+/* Table View, Update, and Delete Buttons */
+.wiki_button_container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.wiki_button {
+    display: inline-block;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    white-space: nowrap;
+}
+
+.table_view {
+    background-color: #5A9BD4;
+    color: white;
+}
+
+.table_view:hover {
+    background-color: #4A86C5;
+}
+
+.table_update {
+    background-color: #23942e;
+    color: white;
+}
+
+.table_update:hover {
+    background-color: #27742f;
+}
+
+.table_delete {
+    background-color: #d84545;
+    color: white;
+}
+
+.table_delete:hover {
+    background-color: #aa3636;
+}
+
+/* Images */
+.gallery_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px; /* Adds space between items */
+    background-color: #ffffff;
+    margin: 1em auto;
+    padding: 1.5em;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    max-width: 750px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.no_image_container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    margin: 20px auto;
+    width: 60%;
+    max-width: 400px;
+}
+
+.img_form {
+    max-width: 100%;
+    margin: 1.5em auto;
+    padding: 1.5em;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+.gallery_item {
+    height: 250px;
+    flex: 1 1 200px;
+    margin: 10px;
+    max-width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery_item p {
+    font-size: 1em;
+    font-weight: bold;
+    color: #3a5f3a;
+    margin-bottom: 0.5em;
+    word-wrap: break-word;
+}
+
+.gallery_item img {
+    width: 100%;
+    object-fit: contain;
+    display: block; 
+    border-radius: 4px;
+}
+
+/* Video */
+.video_gallery {
+    background-color: #ffffff;
+    margin: 1.5em auto;
+    padding: 1.5em;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    max-width: 900px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: grid;
+}
+
+.video_item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.video_item:hover {
+    transform: scale(1.03);
+}
+
+.no_video_container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    margin: 20px auto;
+    width: 60%;
+    max-width: 400px;
+}
+
+.video_item p {
+    font-size: 1em;
+    font-weight: bold;
+    color: #3a5f3a;
+}
+
+.video_item a {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #3a5f3a;
+}
+
+/* Video Comment */
+.vid_comment {
+    max-width: 100%;
+    width: 90%;
+    margin: 1.5em auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comment_container {
+    max-width: 100%;
+    width: 90%;
+    margin: 1.5em auto;
+    background-color: #ffffff;
+    padding: 1.2em;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.comments {
+    margin: 1em 0;
+    padding: 0;
+    list-style: none;
+}
+
+.comments li {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    word-wrap: break-word;
+}
+
+.comments li strong {
+    font-size: 14px;
+    color: #222;
+    font-weight: bold;
+}
+
+.comments li em {
+    font-size: 12px;
+    color: #777;
+    margin-top: 4px;
+}  
+
+.vid_form {
+    max-width: 100%;
+    width: 90%;
+    margin: 1.5em auto;
+    background-color: #ffffff;
+    padding: 1.2em;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact */
+.contact_form {
+    max-width: 100%;
+    margin: 1.5em auto;
+    padding: 1.5em;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+.form_group_contact {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #4a7c4a;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.messages {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.messages li {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    opacity: 1;
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.messages li.fade-out {
+    opacity: 0;
+}
+
+.success {
+    background-color: #dff0d8;
+    color: #3c763d;
+}
+
+.error {
+    background-color: #f2dede;
+    color: #a94442;
+}
+
+/* Buttons */
+
+/* Submit Buttons */
+input[type="submit"] {
+    display: inline-block;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 4px;
+    color: #ffffff;
+    background-color: #3a7a3a;
+    text-align: center;
+    text-decoration: none;
+    margin: 0.5em 0;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #2e5f2e;
+}
+
+/* Add Wiki, Video, Image Buttons */
+.btn_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a.wikiadd_btn,
+a.addvid_btn,
+a.imgadd_btn {
+    display: inline-flex;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #3a7a3a;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+a.wikiadd_btn:hover,
+a.addvid_btn:hover,
+a.imgadd_btn:hover {
+    background-color: #2e5f2e;
+}
+
+/* For Smaller Screens */
+@media (max-width: 768px) {
+/* Navbar */
+    .navbar {
+        padding: 0.8em;
+        flex-direction: column;
+    }
+
+    .navbar a {
+        padding: 0.5em 1em;
+        font-size: 1.2em;
+    }
+
+/* Home */
+    .tree_section {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .tree_content h1 {
+        font-size: 2em;
+    }
+
+    .tree_content p {
+        font-size: 1em;
+    }
+
+    .species_card {
+        max-width: 100%;
+    }
+
+/* Wiki List */
+    .post_entry {
+        margin: 1em;
+    }
+
+    table {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    th, td {
+        padding: 0.8em;
+        font-size: 0.9em;
+    }
+
+/* Buttons */
+    .wiki_button_container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wiki_button {
+        padding: 10px 20px;
+        font-size: 1.1em;
+    }
+
+    .table_view, .table_update, .table_delete {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+/* Image Gallery */
+    .gallery_grid {
+        flex-direction: column;
+    }
+
+    .gallery_item {
+        width: 100%;
+    }
+
+/* Video Gallery */
+    .video_item {
+        width: 100%;
+    }
+
+/* Form */
+    form {
+        width: 90%;
+    }
+
+    .form_group_contact {
+        flex-direction: column;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        padding: 1em;
+        font-size: 1.2em;
+    }
+}
+
+/* For Large Screens */
+@media (min-width: 1200px) {
+    .navbar a {
+        font-size: 1.2em;
+    }
+
+    .tree_content h1 {
+        font-size: 3em;
+    }
+
+    .tree_content p {
+        font-size: 1.4em;
+    }
+
+    .species_card {
+        max-width: 350px;
+    }
+
+    form {
+        width: 60%;
+    }
+}

@@ -1,0 +1,11 @@
+{% extends 'app/Base.html' %}
+{% load static %}
+
+{% block content %}
+    <h1>Edit Post</h1>
+    <form action="{% url 'Wiki_update' object.pk %}" class="wiki_upd_form" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Update">
+    </form>
+{% endblock content %}

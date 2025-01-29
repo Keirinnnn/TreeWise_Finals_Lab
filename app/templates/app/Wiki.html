@@ -1,0 +1,9 @@
+{% extends 'app/Base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="post_entry">
+        <h2><a href="{% url 'Wiki' post.pk %}">{{ post.title }}</a></h2>
+        <p>{{ post.body }}</p>
+    </div>
+{% endblock content %}

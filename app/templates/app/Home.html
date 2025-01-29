@@ -1,0 +1,25 @@
+{% extends 'app/Base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="home_body">
+
+    <div class="tree_section">
+        <div class="tree_content">
+            <h1>Explore the Wonders of Trees</h1>
+            <p>Join us in our journey to discover, learn, and protect trees.</p>
+        </div>
+    </div>
+
+    <section class="featured_species">
+        <h1>Featured Tree Species</h1>
+
+        <div class="species_card">
+            <img src="{% static 'images/oak tree.jpg' %}" alt="Oak Tree">
+            <h3>Oak Tree</h3>
+            <p>The oak is a symbol of strength and endurance.</p>
+        </div>
+    </section>
+
+</div>
+{% endblock content %}
