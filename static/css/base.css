@@ -141,6 +141,16 @@ a:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
+.about_policy {
+    background-color: #ffffff;
+    margin: 1em auto;
+    padding: 1.5em;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    max-width: 750px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
 /* Wiki List */
 .post_entry h2 a:hover {
     color: #2d4d2d;
