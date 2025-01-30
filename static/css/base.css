@@ -7,9 +7,6 @@
 html, body {
     height: 100%;
     margin: 0;
-}
-
-body {
     background-color: #f4f4f4;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', Arial, sans-serif;
     color: #333;
@@ -65,12 +62,11 @@ a:hover {
 
 .navbar a {
     color: #f8f8f8;
-    text-decoration: none;
+    font-weight: bold;
     padding: 0.5em 1em;
     margin: 0 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    font-weight: bold;
     border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
 .navbar a:hover {
@@ -81,22 +77,19 @@ a:hover {
 .burger {
     font-size: 30px;
     cursor: pointer;
-    display: none; /* Hide on large screens */
+    display: none;
 }
 
 /* Responsive: Show burger icon on small screens */
 @media screen and (max-width: 768px) {
-    .burger {
-        display: block;
-    }
+    .burger { display: block; }
 
     .navbar_links {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 60px;
-        right: 10px;
-        background-color: #34495e;
+        top: 110px;
+        background-color: #4a7c4a;
         width: 150px;
         padding: 10px;
         border-radius: 5px;
