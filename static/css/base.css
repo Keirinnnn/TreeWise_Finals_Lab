@@ -80,31 +80,6 @@ a:hover {
     display: none;
 }
 
-/* Responsive: Show burger icon on small screens */
-@media screen and (max-width: 768px) {
-    .burger { display: block; }
-
-    .navbar_links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 110px;
-        background-color: #4a7c4a;
-        width: 150px;
-        padding: 10px;
-        border-radius: 5px;
-    }
-
-    .navbar_links a {
-        display: block;
-        padding: 10px;
-    }
-
-    .navbar_links.active {
-        display: flex;
-    }
-}
-
 /* Home */
 .home_body {
     display: flex;
@@ -131,7 +106,10 @@ a:hover {
 }
 
 .featured_species {
-    padding: 20px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 10px;
     text-align: center;
 }
 
@@ -140,7 +118,8 @@ a:hover {
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
-    margin: 20px auto;
+    margin: 10px;
+    flex-basis: calc(33.33% - 40px); /* 3 cards per row, minus margin */
     max-width: 300px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -649,8 +628,30 @@ a.imgadd_btn:hover {
 }
 
 /* For Smaller Screens */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
+
 /* Navbar */
+.burger { display: block; }
+
+    .navbar_links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 110px;
+        background-color: #4a7c4a;
+        width: 150px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .navbar_links a {
+        display: block;
+        padding: 10px;
+    }
+
+    .navbar_links.active {
+        display: flex;
+    }
     .navbar {
         padding: 0.8em;
         flex-direction: column;
@@ -676,6 +677,8 @@ a.imgadd_btn:hover {
     }
 
     .species_card {
+        flex-basis: calc(50% - 20px);
+        flex-basis: 40%;
         max-width: 100%;
     }
 
