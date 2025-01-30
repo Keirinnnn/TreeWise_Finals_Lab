@@ -77,6 +77,41 @@ a:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
+/* Burger Icon */
+.burger {
+    font-size: 30px;
+    cursor: pointer;
+    display: none; /* Hide on large screens */
+}
+
+/* Responsive: Show burger icon on small screens */
+@media screen and (max-width: 768px) {
+    .burger {
+        display: block;
+    }
+
+    .navbar_links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: #34495e;
+        width: 150px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .navbar_links a {
+        display: block;
+        padding: 10px;
+    }
+
+    .navbar_links.active {
+        display: flex;
+    }
+}
+
 /* Home */
 .home_body {
     display: flex;

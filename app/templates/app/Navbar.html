@@ -3,7 +3,11 @@
 <div class="navbar">
     <img src="{% static 'images/tree_faviconn.png' %}" class="navbar_logo" alt="Logo">
 
-    <div class="navbar_links">
+    <div class="burger" onclick="toggleMenu()">
+        &#9776;
+    </div>
+
+    <div class="navbar_links" id="navbarLinks">
         <a href="{% url 'Home' %}">Home</a>
         <a href="{% url 'About' %}">About Trees</a>
         <a href="{% url 'Add' %}">Wiki</a>

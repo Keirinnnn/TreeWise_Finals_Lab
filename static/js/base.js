@@ -1,5 +1,16 @@
 console.log("JavaScript Here!");
 
+function toggleMenu() {
+    document.getElementById("navbarLinks").classList.toggle("active");
+}
+
+// Automatically close the menu when resizing to a large screen
+window.addEventListener("resize", function () {
+    if (window.innerWidth > 768) {
+        document.getElementById("navbarLinks").classList.remove("active");
+    }
+});
+
 setTimeout(function () {
     var messages = document.getElementById('notification_messages');
     if (messages) {
