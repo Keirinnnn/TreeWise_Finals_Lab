@@ -119,3 +119,4 @@ class ImageGalleryView(ListView):
     model = Image
     template_name = 'app/Image_gallery.html'
     context_object_name = 'images'
+    
