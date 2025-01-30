@@ -4,6 +4,6 @@
 {% block content %}
     <div class="post_entry">
         <h2><a href="{% url 'Wiki' post.pk %}">{{ post.title }}</a></h2>
-        <p>{{ post.body }}</p>
+        <p>{{ post.body|linebreaks }}</p>
     </div>
 {% endblock content %}
