@@ -651,6 +651,7 @@ a.imgadd_btn:hover {
         width: 150px;
         padding: 10px;
         border-radius: 5px;
+        z-index: 10000;
     }
 
     .navbar_links a {
